@@ -7,7 +7,7 @@
 Process the Caltech, ImageNet, and select four frames of each type of event frame image in sequence and merge them into a four-in-one frame image. Change the dataset path as needed.
 
 ```python
-`python four2one.py`
+python four2one.py
 
 
 For the MNIST dataset, thirty event frame images of each category are selected sequentially for synthesis.
