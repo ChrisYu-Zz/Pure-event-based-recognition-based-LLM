@@ -8,7 +8,7 @@ Process the Caltech, ImageNet, and select four frames of each type of event fram
 
 ```python
 python four2one.py
-
+```
 
 For the MNIST dataset, thirty event frame images of each category are selected sequentially for synthesis.
 
