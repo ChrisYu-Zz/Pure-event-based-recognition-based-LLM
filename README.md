@@ -4,17 +4,19 @@
 
 #### 1. Combined event frame images
 
->>Process the Caltech, ImageNet, and select four frames of each type of event frame image in sequence and merge them into a four-in-one frame image. Change the dataset path as needed.
+<div style="margin-left: 20px;">
+Process the Caltech, ImageNet, and select four frames of each type of event frame image in sequence and merge them into a four-in-one frame image. Change the dataset path as needed.
+</div>
 
-   >>`python four2one.py`
+   `python four2one.py`
 
->>For the MNIST dataset, thirty event frame images of each category are selected sequentially for synthesis.
+For the MNIST dataset, thirty event frame images of each category are selected sequentially for synthesis.
 
-   >>`python thirty2one.py`
+   `python thirty2one.py`
 
 #### 2. Generating Groundtruth
 
->>For the Caltech and MNIST datasets, the parent folder name of the event frame image is its classification. We use the following file to directly rename the event frame images of the three modes (E2HQV, E2VID, and grayscale event frames) in the dataset to ensure randomness. At the same time, the name of each event frame image and its corresponding classification are written into a .txt file in the form of a dictionary.
+For the Caltech and MNIST datasets, the parent folder name of the event frame image is its classification. We use the following file to directly rename the event frame images of the three modes (E2HQV, E2VID, and grayscale event frames) in the dataset to ensure randomness. At the same time, the name of each event frame image and its corresponding classification are written into a .txt file in the form of a dictionary.
 
    `python Generate_Groundtruth.py`
 
