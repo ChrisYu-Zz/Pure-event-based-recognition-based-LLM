@@ -4,7 +4,7 @@
 
 #### 1. Combined event frame images
 
-____Process the Caltech, ImageNet, and select four frames of each type of event frame image in sequence and merge them into a four-in-one frame image. Change the dataset path as needed.
+Process the Caltech, ImageNet, and select four frames of each type of event frame image in sequence and merge them into a four-in-one frame image. Change the dataset path as needed.
 
    `python four2one.py`
 
