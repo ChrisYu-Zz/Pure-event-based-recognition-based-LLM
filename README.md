@@ -28,7 +28,6 @@ For the ImageNet dataset, since the parent folder name of each type of image is 
 
 ```python
 python Generate_Groundtruth.py
-
 python Process_Class.py
 ```
 
@@ -42,13 +41,12 @@ python Event_frame_image_preparation.py
 
 ### 2. Test
 
-Test GPT-4o and GPT-4-turbo, perform different tests on event frame images of different modalities of different datasets, generate different test results according to different data modalities and models tested, and save them in different .txt files.
+Test GPT-4o and GPT-4-turbo, perform different tests on event frame images of different modalities of different datasets, generate different test results according to different data modalities and models tested, and save them in different `.txt` files.
 
 For example, I want to test the recognition effect of GPT-4o in identifying event frame images in the E2HQV modality of the Caltech dataset, which can be tested through the following files.
 
 ```python
 cd ./Caltech/E2HQV
-
 python E2HQV-GPT-4o.py
 ```
 
