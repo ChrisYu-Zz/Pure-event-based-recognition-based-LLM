@@ -39,6 +39,10 @@ While testing GPT performance, in order to avoid being affected by the GPT memor
 python Event_frame_image_preparation.py
 ```
 
+#### 4. Image upload
+
+Since ChatGPT's API can only read URL images when reading files, local images need to be converted. Here we choose to upload the image to the storage space of a personal server to obtain its URL.
+
 ### 2. Test
 
 Test GPT-4o and GPT-4-turbo, perform different tests on event frame images of different modalities of different datasets, generate different test results according to different data modalities and models tested, and save them in different `.txt` files.
