@@ -1,4 +1,4 @@
-# event-recognition-based-LLM
+# **Pure-event-based-recognition-based-LLM**
 
 ### 1. Dataset processing
 
