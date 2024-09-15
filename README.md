@@ -2,52 +2,50 @@
 
 ### 1. Dataset processing
 
-#### 1. Combined event frame images
+#### 1) Combined images
 
-Process the Caltech, ImageNet, and select four frames of each type of event frame image in sequence and merge them into a four-in-one frame image. Change the dataset path as needed.
+Select four frames in sequence from each representation and merge them into a single frame. Change the dataset path as needed.
 
 ```python
 python four2one.py
 ```
 
-For the MNIST dataset, thirty event frame images of each category are selected sequentially for synthesis.
+For the N-MNIST dataset, thirty frames of each category are selected sequentially for synthesis.
 
 ```python
 python thirty2one.py
 ```
 
-#### 2. Generating Groundtruth
+#### 2) Generating Groundtruth
 
-For the Caltech and MNIST datasets, the parent folder name of the event frame image is its classification. We use the following file to directly rename the event frame images of the three modes (E2HQV, E2VID, and grayscale event frames) in the dataset to ensure randomness. At the same time, the name of each event frame image and its corresponding classification are written into a .txt file in the form of a dictionary.
+For the N-Caltech and N-MNlST datasets, the parent folder name represents the category of each frame. We use the following script to directly rename the frames from the three representations to ensure randomness. Simultaneously, the names of the frames and their corresponding categories are recorded in a dictionary format and saved in a `.txt` file for accurate verification in subsequent steps.
 
 ```python
 python Generate_Groundtruth.py
 ```
 
-For the ImageNet dataset, since the parent folder name of each type of image is its classification number, the following two files are needed to generate the corresponding relationship between the numbers and then generate Groundtruth.
+For the ImageNet dataset, since the parent folder name of each type of frame is its classification number, the following two files are needed to generate the corresponding relationship between the numbers and then generate Groundtruth.
 
 ```python
 python Generate_Groundtruth.py
 python Process_Class.py
 ```
 
-#### 3. Event frame image preparation
+#### 3) Frame preparation
 
-While testing GPT performance, in order to avoid being affected by the GPT memory library and reduce costs, we will input prompt words and ten synthetic images of event frames into GPT each time, so we use the following files to group the event frame images.
+While testing GPT performance, in order to avoid being affected by the GPT memory library and reduce costs, we will input prompt words and ten synthetic images of frames into GPT each time, so we use the following files to group the event frames and reconstructed frames.
 
 ```python
 python Event_frame_image_preparation.py
 ```
 
-#### 4. Image upload
+#### 4) Frame upload
 
-Since ChatGPT's API can only read URL images when reading files, local images need to be converted. Here we choose to upload the image to the storage space of a personal server to obtain its URL.
+Since ChatGPT's API can only read URL frames when reading files, local frames need to be converted. Here we choose to upload the frame to the storage space of a personal server to obtain its URL.
 
 ### 2. Test
 
-Test GPT-4o and GPT-4-turbo, perform different tests on event frame images of different modalities of different datasets, generate different test results according to different data modalities and models tested, and save them in different `.txt` files.
-
-For example, I want to test the recognition effect of GPT-4o in identifying event frame images in the E2HQV modality of the Caltech dataset, which can be tested through the following files.
+Test GPT-4o and GPT-4turbo by performing various tests on frames from different representations across multiple datasets. Generate distinct test results based on there presentation and model being tested, and save the results in separate `.txt` files.
 
 ```python
 cd ./Caltech/E2HQV
