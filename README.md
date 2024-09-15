@@ -2,7 +2,7 @@
 
 ### 1. Dataset processing
 
-#### 1) Combined images
+#### 1) Combining frames
 
 Select four frames in sequence from each representation and merge them into a single frame. Change the dataset path as needed.
 
@@ -31,7 +31,7 @@ python Generate_Groundtruth.py
 python Process_Class.py
 ```
 
-#### 3) Frame preparation
+#### 3) Preparation frame 
 
 While testing GPT performance, in order to avoid being affected by the GPT memory library and reduce costs, we will input prompt words and ten synthetic images of frames into GPT each time, so we use the following files to group the event frames and reconstructed frames.
 
@@ -39,7 +39,7 @@ While testing GPT performance, in order to avoid being affected by the GPT memor
 python Event_frame_image_preparation.py
 ```
 
-#### 4) Frame upload
+#### 4) Upload frame 
 
 Since ChatGPT's API can only read URL frames when reading files, local frames need to be converted. Here we choose to upload the frame to the storage space of a personal server to obtain its URL.
 
