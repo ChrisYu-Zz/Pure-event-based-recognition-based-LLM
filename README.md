@@ -1,3 +1,5 @@
+
+
 # **Pure-event-based-recognition-based-LLM**
 
 ### 1. Dataset processing
@@ -18,7 +20,7 @@ python thirty2one.py
 
 #### 2) Generating Groundtruth
 
-For the N-Caltech and N-MNlST datasets, the parent folder name represents the category of each frame. We use the following script to directly rename the frames from the three representations to ensure randomness. Simultaneously, the names of the frames and their corresponding categories are recorded in a dictionary format and saved in a `.txt` file for accurate verification in subsequent steps.
+For the N-Caltech and N-MNIST datasets, the parent folder name represents the category of each frame. We use the following script to directly rename the frames from the three representations to ensure randomness. Simultaneously, the names of the frames and their corresponding categories are recorded in a dictionary format and saved in a `.txt` file for accurate verification in subsequent steps.
 
 ```python
 python Generate_Groundtruth.py
@@ -51,4 +53,3 @@ Test GPT-4o and GPT-4turbo by performing various tests on frames from different 
 cd ./Caltech/E2HQV
 python E2HQV-GPT-4o.py
 ```
-
